@@ -201,6 +201,6 @@ const styles = StyleSheet.create({
     position: 'relative'
   },
   button: {
-    position: 'absolute'
+    position: 'relative'
   }
 })
