@@ -32,7 +32,8 @@ export class SlideButton extends Component {
 
   componentWillMount() {
     var self = this;
-
+    var threshold = this.props.threshold || 0.4
+    
     this.panResponder = PanResponder.create({
       onStartShouldSetPanResponder: (evt, gestureState) => true,
       onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
@@ -50,7 +51,7 @@ export class SlideButton extends Component {
 
       onPanResponderRelease: (evt, gestureState) => {
         // Button movement of > 40% is considered a successful slide
-        if (this.state.dx > (this.buttonWidth * 0.4)) {
+        if (this.state.dx > (this.buttonWidth * threshold)) {
           // Move the button out
           this.moveButtonOut(() => {
             self.setState({ swiped: true });
