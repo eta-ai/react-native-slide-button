@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import {
+  Dimensions,
   StyleSheet,
   View,
   Text,
@@ -11,7 +12,6 @@ import {
   Animated
 } from 'react-native';
 
-var Dimensions = require('Dimensions');
 var SCREEN_WIDTH = Dimensions.get('window').width;
 var SCREEN_HEIGHT = Dimensions.get('window').height;
 
